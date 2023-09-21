@@ -1,0 +1,7 @@
+
+<h1>Chambre <%= @room.id %></h1>
+<p>Prix par nuit: <%= @room.price_per_night %></p>
+<p>Capacité: <%= @room.capacity %></p>
+
+<%= link_to 'Retour à la liste des chambres', rooms_path %>
+<%= link_to 'Réserver cette chambre', new_room_booking_path(@room) %>

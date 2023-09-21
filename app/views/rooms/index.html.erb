@@ -1,0 +1,10 @@
+
+<h1>Liste des chambres</h1>
+<% @rooms.each do |room| %>
+  <p>
+    <strong>Chambre <%= room.id %>:</strong>
+    <strong>Price <%= room.price_per_night %>:</strong>
+    <strong>capacity<%= room.capacity %>:</strong>
+    <a href="<%= room_path(room) %>">Détails</a>
+  </p>
+<% end %>
