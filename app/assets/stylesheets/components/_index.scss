@@ -3,3 +3,14 @@
 @import "avatar";
 @import "form_legend_clear";
 @import "navbar";
+@import "footer";
+body {
+  background-color: rgb(117, 188, 239);
+  height: 100%; // S'assurer que le body prend toute la hauteur
+}
+
+#main-content {
+  min-height: calc(100% - 60px); // Ajuster selon la hauteur du footer
+  padding-bottom: 60px; // Éviter que le contenu ne se superpose au footer
+  box-sizing: border-box;
+}

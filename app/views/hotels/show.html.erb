@@ -1,7 +1,8 @@
-
+<div class="container">
 <h1><%= @hotel.name %></h1>
 <p><%= @hotel.address %></p>
 
 <%= link_to 'Edit', edit_hotel_path(@hotel) %>
 <%= button_to "Destroy this hotel", @hotel, method: :delete %>
 <%= link_to 'Back to Hotels List', hotels_path %>
+</div>

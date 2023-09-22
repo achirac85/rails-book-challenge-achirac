@@ -2,7 +2,7 @@
 
 <%= simple_form_for [@rooom, @booking] do |f| %>
           <%= f.input :date_range,
-                      label: "entrer la date de votre resrvation",
+                      label: "Date Range",
                       as: :string,
                       input_html: { data: { controller: "datepicker" } } %>
           <%= f.submit %>
