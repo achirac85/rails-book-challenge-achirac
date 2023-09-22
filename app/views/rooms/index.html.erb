@@ -5,6 +5,9 @@
     <strong>Chambre <%= room.id %>:</strong>
     <strong>Price <%= room.price_per_night %>:</strong>
     <strong>capacity<%= room.capacity %>:</strong>
+    <%= link_to 'Show', room %> |
+    <%= link_to 'Edit', edit_room_path(room) %> |
+    <%= link_to 'Delete', room, method: :delete, data: { confirm: 'Are you sure?' } %>
     <a href="<%= room_path(room) %>">Détails</a>
   </p>
 <% end %>

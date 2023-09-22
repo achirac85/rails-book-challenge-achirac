@@ -47,7 +47,7 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking.destroy
-    redirect_to room_path(@room), notice: 'Booking was successfully destroyed.'
+    redirect_to bookings_url(@room), notice: 'Booking was successfully destroyed.'
   end
 
   private
