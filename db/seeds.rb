@@ -6,6 +6,12 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
+require 'open-uri'
+
+puts "Cleaning database..."
+Hotel.destroy_all
+Room.destroy_all
+Booking.destroy_all
 
 
 10.times do
@@ -30,11 +36,11 @@ Hotel.all.each do |hotel|
     Room.create!(
       price_per_night: Faker::Commerce.price(range: 50..300),
       capacity: rand(1..5),
-      hotel: hotel
+      hotel_id: hotel.id
     )
   end
 end
-puts "10 rooms for each hotel created"
+puts "10 rooms created"
 
 User.all.each do |user|
   10.times do
@@ -46,4 +52,4 @@ User.all.each do |user|
     )
   end
 end
-puts "10 bookings for each user created"
+puts "10 bookings created"

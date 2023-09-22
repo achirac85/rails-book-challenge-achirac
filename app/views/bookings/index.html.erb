@@ -1,2 +1,30 @@
-<h1>Bookings#index</h1>
-<p>Find me in app/views/bookings/index.html.erb</p>
+
+
+<h1>All Bookings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>Room ID</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bookings.each do |booking| %>
+      <tr>
+        <td><%= booking.user_id %></td>
+        <td><%= booking.room_id %></td>
+        <td><%= booking.starts_at %></td>
+        <td><%= booking.ends_at %></td>
+        <td>
+          <%= link_to 'Show', booking %> |
+          <%= link_to 'Edit', edit_booking_path(booking) %> |
+          <%= link_to 'Delete', booking, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

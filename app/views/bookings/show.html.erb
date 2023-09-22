@@ -1,2 +1,25 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
+<h1>Booking Details</h1>
+
+<p>
+  <strong>User ID:</strong>
+  <%= @booking.user_id %>
+</p>
+
+<p>
+  <strong>Room ID:</strong>
+  <%= @booking.room_id %>
+</p>
+
+<p>
+  <strong>Start Date:</strong>
+  <%= @booking.starts_at %>
+</p>
+
+<p>
+  <strong>End Date:</strong>
+  <%= @booking.ends_at %>
+</p>
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>
+

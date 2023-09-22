@@ -1,2 +1,27 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<main>
+  <h2>Bienvenue à l'Hôtel & Spa Resa</h2>
+  <p>À l'Hôtel & Spa Resa, nous vous offrons une expérience luxueuse à des prix abordables. Plongez dans le confort de nos chambres modernes et découvrez une relaxation sans égale. Réservez dès maintenant et profitez d'un séjour inoubliable.</p>
+
+
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <%= image_tag "chambresingle.jpg", class: "d-block w-100", alt: "chambre single" %>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag "chambredouble.jpg", class: "d-block w-100", alt: "chambre double" %>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag "suiteroyale.jpg", class: "d-block w-100", alt: "chambre single" %>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</main>

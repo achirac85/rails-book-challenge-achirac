@@ -1,0 +1,9 @@
+<h1>Réserver la chambre <%= @room.id %></h1>
+
+<%= simple_form_for [@rooom, @booking] do |f| %>
+          <%= f.input :date_range,
+                      label: "entrer la date de votre resrvation",
+                      as: :string,
+                      input_html: { data: { controller: "datepicker" } } %>
+          <%= f.submit %>
+        <% end %>

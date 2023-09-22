@@ -1,2 +1,7 @@
-<h1>Hotels#show</h1>
-<p>Find me in app/views/hotels/show.html.erb</p>
+
+<h1><%= @hotel.name %></h1>
+<p><%= @hotel.address %></p>
+
+<%= link_to 'Edit', edit_hotel_path(@hotel) %>
+<%= link_to 'delete', "#" %>
+<%= link_to 'Back to Hotels List', hotels_path %>
